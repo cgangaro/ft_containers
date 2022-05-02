@@ -1,4 +1,4 @@
-NAME			=		 test_map
+NAME			=		 test1_std
 
 HEADER			=		../includes/iterators/iterator_traits.hpp \
 						../includes/iterators/reverse_iterator.hpp \

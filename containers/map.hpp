@@ -180,7 +180,7 @@ namespace ft
 
 		size_type max_size() const
 		{
-			return (_alloc.max_size());
+			return (std::numeric_limits<size_type>::max() / sizeof(map_node));
 		}
 
 		//Observers
@@ -195,17 +195,14 @@ namespace ft
 			return (value_compare(_compare));
 		}
 
-		/*
- * Element access
- */
+		//Element access
+
 		mapped_type& operator[](const key_type& k)
 		{
 			return (*(this->insert(value_type(k, mapped_type())).first)).second;
 		}
 
-		/*
- * Modifiers
- */
+		//Modifiers
 
 		pair<iterator,bool> insert (const value_type& val)
 		{
@@ -515,9 +512,7 @@ namespace ft
 			this->erase(this->begin(), this->end());
 		}
 
-/*
- * Operations
- */
+		//Operations
 
 		iterator find(const key_type &k)
 		{
@@ -625,9 +620,7 @@ namespace ft
 			return _root;
 		}
 
-/*
- * Allocator
- */
+		//Allocator
 
 		allocator_type get_allocator(void) const
 		{
@@ -766,9 +759,7 @@ namespace ft
 		}
 	};
 
-/*
- * Non-member functions
- */
+	//Non-member functions
 
 	template<class Key, class T, class Compare, class Alloc>
 	bool operator==(const ft::map<Key,T,Compare,Alloc> &lhs, const ft::map<Key,T,Compare,Alloc> &rhs)
