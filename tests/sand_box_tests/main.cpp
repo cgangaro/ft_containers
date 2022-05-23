@@ -21,7 +21,7 @@ long int	ft_get_time(void)
 
 void print_time(long int start, long int end, std::string name)
 {
-	// std::cout << "start = " << start << "  end = " << end << std::endl;
+	//// std::cout << "start = " << start << "  end = " << end << std::endl;
 	std::cout << "Tester " << name << " takes [" << ((float)(end - start)) << "] usec to complete." << std::endl;
 }
 
